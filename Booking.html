@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Salon Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="./index.html"><h1 class="box">Salon Booking <img href="./index.html" class="SVG" src="https://img.icons8.com/?size=50&id=73&format=png" alt="HomePage" style="width:50px;height:60px; margin: 10px; margin-bottom: -15px;"></h1></a>
+
+            <ul>
+                <li><a href="./Designer.html" class="box">Our Designers</a></li>
+                <li><a href="./service.html" class="box">Services</a></li>
+                <li><a href="./Booking.html" class="box">Book Now</a></li>
+                <li><a href="./Blogs.html" class="box">Blogs</a></li>
+                <li><a href="./contact.html" class="box">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+<header class="hero">
+    <h1>Welcome to Our Salon</h1>
+    <p>Your beauty is our priority!</p>
+</header>
+
+
+<!--Open & close Time-->
+<div style="margin: 40px; padding: 20px;"> <span  class="SalonName"> Cheri Lady Beauty Salon </span> -Since 1999</div>
+<div style="margin-left: 200px; padding: 40px;">
+    <span class="text">Opening Time</span>
+    <img src="https://www.svgrepo.com/show/49833/right-arrow.svg" style="height: 50px; width: 50px;margin-bottom: -23px;">
+    <img src="https://www.svgrepo.com/show/49833/right-arrow.svg" style="height: 50px; width: 50px; margin-left: -30px; margin-bottom: -23px;">
+    <span class="Time"> <b>8:00 AM</b></span>
+    <span class="text">Closing Time</span>
+    <img src="https://www.svgrepo.com/show/49833/right-arrow.svg" style="height: 50px; width: 50px;margin-bottom: -23px;">
+    <img src="https://www.svgrepo.com/show/49833/right-arrow.svg" style="height: 50px; width: 50px; margin-left: -30px;margin-bottom: -23px;">
+    <span class="Time"><b>8:00 PM</b></span>
+</div>
+
+<!-- Booking Section -->
+<img src="Screenshot 2024-12-06 201132.png" alt="bgimg" class="BGIMG">
+<section id="booking" class="booking"  style=" position:relative; margin-top: 80px; padding-bottom: 3%;background-color:rgba(245, 205, 28, 0.8);" >
+    <h2>Book Your Appointment</h2>
+
+    <form id="booking-form">
+        <label for="service" style="font-family: Georgia; margin-top: 5%;">Which service do you like?</label>
+        <select id="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="hair-treatment">Hair Treatment</option>
+            <option value="hair-cut">Hair Cut</option>
+            <option value="hair-dyes">Hair Dyes</option>
+            <option value="hair-stright/curl/extension and ...">Hair-stright/curl/extension and ...</option>
+            <option value="nails">Nails</option>
+            <option value="Facial">Facial</option>
+            <option value="spa/Massage">Spa/Massage</option>
+            <option value="Manicure">Manicure</option>
+            <option value="other">Other</option>
+        </select>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="date" id="date" required>
+        <input type="time" id="time" required>
+        
+        <textarea id="message" placeholder="Additional Requests"></textarea>
+        <button type="submit">Book Now</button>
+    </form>
+    
+    <!-- Confirmation Message Display -->
+<div id="demo" class="hidden" style="  background-image:url(5632492.png);
+background-repeat: no-repeat;
+background-size: 20%;  padding: 10%; text-align: center;">
+    <!-- Confirmation message will appear here -->
+</div>
+
+<!-- EmailJS script -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+</section>
+
+
+<!-- Booking Appointment by phone call -->
+<section class="appointmentByPhone" style="margin: 40px; padding: 20px;">
+    <div>
+        <h2>You can also book an appointment by calling.<img class="SVG" src="https://www.svgrepo.com/show/533283/phone-call.svg" alt="PhoneSvg" style="width:130px; height:130px; margin-bottom: -40px;"></h2>
+        <h4 style="margin: 15px;"><img src="https://www.svgrepo.com/show/533285/phone.svg" style="width:60px; height:60px; margin-bottom: -20px;">: +123 456 7890</h4>
+    </div>
+
+</section>
+
+
+
+
+<footer>
+    <section class="imgForBooking" style="margin: 10px; padding: 10px;">
+        <img src="https://www.svgrepo.com/show/482634/hair-salon-1.svg" alt="Comb" style="width:80px; height:80px;" class="SVG" >
+        <img src="https://www.svgrepo.com/show/482579/hair-dryer-4.svg" alt="HairDrier" style="width:80px; height:80px;" class="SVG" >
+        <img src="https://www.svgrepo.com/show/403869/nail-polish.svg" alt="nails" style="width:80px; height:80px;" class="SVG" >
+        <img src="https://www.svgrepo.com/show/151329/spa-facial-treatment-with-mask-and-massages.svg" alt="Message" style="width:80px; height:80px;" class="SVG" >
+        <img src="https://www.svgrepo.com/show/366812/spa.svg" alt="spa" style="width:80px; height:80px;" class="SVG" >
+        <p>&copy; 2024 Cheri Lady Salon Salon Booking. All rights reserved.</p>
+    </section>
+</footer>
+
+<script>
+
+function toggleText(button) {
+      const blog = button.parentElement;
+      const shortText = blog.querySelector('.short-text');
+      const fullText = blog.querySelector('.full-text');
+      
+      if (fullText.style.display === 'block') {
+        fullText.style.display = 'none';
+        shortText.style.display = 'block';
+        button.textContent = 'See More';
+      } else {
+        fullText.style.display = 'block';
+        shortText.style.display = 'none';
+        button.textContent = 'See Less';
+      }
+    }
+    // Initialize EmailJS with your user ID
+    emailjs.init("p4DnicNFFzxIyJdv7");
+
+    // Get the form and the confirmation message element
+    const form = document.getElementById("booking-form");
+    const confirmationMessage = document.getElementById("demo");
+
+    // Handle form submission
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get form data
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const date = document.getElementById("date").value;
+        const time = document.getElementById("time").value;
+        const message = document.getElementById("message").value;
+
+        // Check if all required fields are filled
+        if (name && email && date && time) {
+            // Show confirmation message
+            confirmationMessage.innerHTML = `
+                <h3>Booking Confirmation</h3>
+                <p>Thank you, ${name}! Your appointment has been successfully booked.</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Date:</strong> ${date}</p>
+                <p><strong>Time:</strong> ${time}</p>
+                <p><strong>Message:</strong> ${message ? message : "No additional requests"}</p>
+            `;
+            confirmationMessage.classList.remove("hidden");
+
+            // Send the form data to your email using EmailJS
+            const emailParams = {
+                name: name,
+                email: email,
+                date: date,
+                time: time,
+                message: message
+            };
+
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", emailParams)
+                .then(function(response) {
+                    console.log("Email sent successfully:", response);
+                }, function(error) {
+                    console.log("Failed to send email:", error);
+                });
+        } else {
+            // Show error message if some fields are missing
+            confirmationMessage.innerHTML = "<p>Please fill in all required fields.</p>";
+            confirmationMessage.classList.remove("hidden");
+        }
+    });
+    document.querySelectorAll('.navbar a').forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add('active');
+    }
+});
+</script>
+</body>
+</html>
